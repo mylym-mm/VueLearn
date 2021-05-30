@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .aaa{
+      color: aqua;
+    }
+    .bbb{
+      color:blueviolet;
+    }
+    class1{
+      color: chocolate;
+    }
+    class2{
+      color: coral;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='app'>
+    <h2 class='title' :class='[class1,class2]'>{{message}}</h2>
+    <h2 class='title' :class='getClasses()'>{{message}}</h2>
+  </div>
+
+  <script src='../js/vue.js'></script>
+
+  <script>
+    const app = new Vue({
+      el:'#app',
+
+      data:{
+        message:'ghyiloveu',
+        class1:'aaa',
+        class2:'bbb'
+        },
+
+      methods:{
+        getClasses:function(){
+          return[this.class1,this.class2]
+        }
+      }
+
+    })
+    
+  </script>
+</body>
+</html>
